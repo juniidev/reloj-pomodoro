@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITULO -->
+    <title>Pomodoro | Junii</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+
+    <section>
+        <!-- contenedor -->
+        <div class="container">
+            <!-- Titulo -->
+            <h1>Pomodoro</h1>
+
+            <!-- identificador -->
+            <div class="panel">
+                <p id="work">Trabajo</p>
+                <p id="break">Descanso</p>
+            </div>
+
+            <!-- area del cronometro -->
+            <div class="timer">
+                <div class="circle">
+                    <div class="time">
+                        <p id="min"> </p>
+                        <p> : </p>
+                        <p id="sec"> </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- area de manejo -->
+            <div class="buttons">
+                <button id="start" onclick="start()"><i class="uil uil-play"></i></button>
+
+                <a href="/" id="reset"><i class="uil uil-redo"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPT -->
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
