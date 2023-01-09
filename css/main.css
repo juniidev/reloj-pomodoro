@@ -1,0 +1,169 @@
+/* ===== Importado de la tipografía ===== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* ===== Ajustes personalizados ===== */
+
+:root {
+  font-size: 16px;
+
+  --color-primary: hsl(240, 15%, 13%);
+  --color-secondary: hsl(75, 90%, 61%);
+  --color-font: hsl(240, 20%, 97%);
+
+  /* --color-shadow: hsl(240, 15%, 11%); */
+  --color-shadow: hsl(240, 15%, 16%);
+}
+
+/* ===== Configuración general ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+  font-size: 1.6rem;
+  background-color: var(--color-primary);
+}
+
+p,
+i,
+h1 {
+  color: var(--color-font);
+}
+
+i {
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+/* ===== Contenido ===== */
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  margin-inline: auto;
+  align-items: center;
+  padding-inline: 2rem;
+  justify-items: center;
+  flex-direction: column;
+  width: min(42.5rem, 100%);
+}
+
+.panel {
+  width: 20rem;
+  display: grid;
+  padding: 1rem;
+  text-align: center;
+  margin-block: 4rem;
+  border-radius: 1rem;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0px 0px 15px 10px var(--color-shadow);
+  -webkit-box-shadow: 0px 0px 15px 10px var(--color-shadow);
+}
+
+.panel p {
+  opacity: 0px;
+  transition: 1s ease-in;
+}
+
+.panel p.active {
+  opacity: 1;
+  color: var(--color-secondary);
+}
+
+.timer {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 15px 10px var(--color-shadow);
+  -webkit-box-shadow: 0px 0px 15px 10px var(--color-shadow);
+}
+
+.circle {
+  width: 17rem;
+  height: 17rem;
+  display: flex;
+  border-radius: 50%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary);
+}
+
+.circle::before {
+  width: 95%;
+  height: 95%;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  background-color: var(--color-primary);
+}
+
+.time {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+}
+
+.time p {
+  font-size: 2.4rem;
+}
+
+.time p:nth-of-type(2) {
+  top: -0.5rem;
+  position: relative;
+  margin-inline: 0.5rem;
+}
+
+.buttons {
+  margin-top: 1.6rem;
+}
+
+.buttons button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.buttons #reset {
+  display: none;
+}
+
+/* =====
+
+  Diseño responsive
+
+===== */
+
+@media (max-width: 767px) {
+  .panel {
+    font-size: 1rem;
+    width: 100%;
+    margin-block: 2rem;
+  }
+  .timer {
+    width: 15rem;
+    height: 15rem;
+  }
+  .circle {
+    width: 12rem;
+    height: 12rem;
+  }
+}
